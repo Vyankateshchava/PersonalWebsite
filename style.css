@@ -1,0 +1,495 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px; /* Or your preferred max width */
+    margin: auto;
+}
+
+hr {
+    width: 50%;
+    margin: 20px auto;
+    border-top: 1px solid #ccc;
+}
+    
+h1, h2 {
+    font-weight: 700;
+}
+    
+p {
+    font-weight: 400;
+    }
+    
+a {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0;
+}
+    
+a:hover {
+    color: #005663;
+    text-decoration: underline;
+}
+
+.fas, .fab {
+    margin-right: 1px;
+    color: inherit;
+}
+    
+header, footer{
+    
+    background: linear-gradient(to right, #831bcd,#f96200);
+    color:#fff;
+    padding: 40px 0;
+    text-align: center;
+}
+    
+section {
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+.icon-link{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+
+}
+
+.email-icon{
+    background-color: #bc2410;
+}
+
+.linkedin-icon{
+    background-color: #007bff
+}
+
+.icon-link:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skills-list li {
+    list-style-type: none;
+    background: #f0f2f5;
+    color: #333; /* Changed text color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation: bounce 1s infinite alternate; /* Apply bounce animation */
+}
+
+img {
+    
+    width: 200px;
+    
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+    
+form {
+    max-width: 450px;
+    color:#333;
+    margin: 20px auto;
+    padding: 20px;
+    background:#fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: flex start;
+
+}
+
+.form-group label {
+    flex: 0 0 50px;
+    margin-right: 10px;
+    text-align: right;
+}
+    
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+    
+form button {
+    width: calc(100% - 90px);
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-top: 10px;
+    background:linear-gradient(to right, #831bcd,#f96200);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-image 0.3s ease;
+}
+
+form button:hover {
+    background:linear-gradient(to right, #f96200,  #831bcd);
+}
+    
+ @media only screen and (max-width: 768px){
+    .skills-list {
+        flex-direction: column;
+    }
+ }
+
+ @media only screen and (max-width: 480px) {
+    header, footer {
+        padding: 15px;
+    }
+
+    section, form {
+        width: clac(100% -20px);
+        margin: 10px auto;
+    }
+ }
+
+
+@keyframes bounce{
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+
+}
+
+.horizontal-scroll{
+    overflow-x: hidden;
+    width: 100%;
+
+}
+
+.icon-container{
+    display: flex;
+    animation: scrollAnimation 10s linear infinite;
+    width: max-content;
+}
+
+.icon-container img{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+@keyframes scrollAnimation{
+    0% {
+        transform: translateX(100vw); 
+    }
+    100%{
+        transform: translateX(-100%); 
+    }
+}
+.dark-mode{
+    background-color:#333;
+    color:#fff
+}
+
+.dark-mode button {
+    background-color:#555;
+    color:#fff;
+}
+
+.dark-mode p {
+    color: #fff
+}
+
+#programming-languages {
+    margin-top: 50px; /* Adjust spacing as needed */
+}
+
+#programming-languages .skill {
+    margin-bottom: 20px;
+}
+
+#programming-languages .progress-bar {
+    
+    width: 0;
+    height: 20px;
+    background: linear-gradient(to right, #831bcd, #f9620b);
+    border-radius: 10px;
+}
+
+#programming-languages .progress {
+    height: 100%;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+#programming-languages .progress-bar.animated {
+    animation: animateProgress 1s ease forwards;
+}
+
+@keyframes animateProgress {
+    to {
+        width: var(--progress); /* Animate to the specified progress */
+    }
+}
+
+
+
+
+#projects {
+    display: grid;
+    width: 60%; /* Set the width to 100% */
+    max-width: 1200px; /* Adjust the max-width property as needed */
+    margin: 0 auto; /* Center the projects section horizontally */
+    grid-template-columns: repeat(2, 1fr); /* Three columns layout */
+    gap: 10px; /* Spacing between thumbnails */
+}
+
+.project-thumbnail {
+    border: 2px solid #ccc; /* Border around each thumbnail */
+    border-radius: 8px;
+    box-shadow: 0 9px 9px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.thumbnail-content {
+    padding: 0px 0px 20px 0px; /* Padding inside the thumbnail frame */
+}
+
+.thumbnail-content img {
+    width: 100%; /* Make image responsive */
+    border-radius: 8px 8px 0px 0px; 
+}
+
+.thumbnail-content h3 {
+    margin-top: 10px;
+    font-size: 18px; /* Adjust title font size */
+}
+
+.thumbnail-content p {
+    margin-top: 10px;
+}
+
+.thumbnail-content .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #831bcd;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.thumbnail-content .btn:hover {
+    background-color: #f9620b;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #projects {
+        grid-template-columns: 1fr; /* This changes the layout to single column */
+    }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Adjust based on content */
+    max-height: 80vh; /* Limit the height to ensure it doesn't overflow the viewport */
+    overflow-y: auto; /* Allow scrolling within the modal if content exceeds its max height */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box; /* Ensure padding and border are included in width calculations */
+    max-width: 80%; /* Adjusted for a better layout */
+}
+
+
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.modal-row {
+    display: flex;
+    justify-content: space-between; /* Ensures spacing between columns */
+    align-items: flex-start; /* Align items at the top */
+}
+
+
+.modal-row {
+    display: flex;
+    justify-content: space-between; /* Ensures spacing between columns */
+    align-items: flex-start; /* Align items at the top */}
+
+.column {
+    flex: 1 1 45%; /* Give each column a bit of flex-grow and flex-shrink, but base size of 45% */
+    margin: 5px; /* Small margin for spacing */
+    min-width: 250px; /* Minimum width before wrapping */
+    flex-basis: 45%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+.image-carousel img {
+    width: auto; /* Adjust based on your layout needs */
+    height: 100px; /* Example height, adjust as necessary */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    margin-bottom: 10px;
+    border-radius: 50%; /* Creates circular images */
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin-top: 10px;
+}
+
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+.github-link i {
+    margin: 0; /* Center the icon */
+}
+
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-row {
+        flex-direction: column;
+    }
+
+    .column {
+        flex-basis: auto; /* Allows the column to take necessary space */
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+
+
+.carousel-container {
+    position: relative;
+    max-width: 600px; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide img {
+    display: none; /* Hide images by default */
+    width: 100%; /* Full width of the container */
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    border: none; /* Remove border */
+    border-radius: 0; /* Remove any rounded corners */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
